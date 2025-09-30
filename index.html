@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
     <title>Spotify -choice your music</title>
 </head>
 <body>
+  <!-- nevagation bar -->
     <nav>
-       <ui>
-        <li class="brand"><img src="logo.jpeg" alt="spotify"></li>
-         <li>Home</li>
+       <ul>
+        <li class="brand"><img src="logo.png" alt="spotify">Spotify</li>
+         <li class="home">Home</li>
          <li>About</li>
-       </ui>
+       </ul>
     </nav>
+<!-- main body -->
+    <div class="container">
+                  <h1>Best of NCS -No copyright Sound</h1>
+                  <div class="songlist"> </div>
+                  <div class="songbanner"> </div>
+    </div>
+<!-- bottom of thhs website -->
+    <div class="bottom">
+        <input type="range" name="range" id="voliumBar" min="0" max="100">
+        <div class="icon">
+          <!-- fontawsam icom --> 
+         <i class=" fas fa-3x fa-step-backward"></i>
+         <i class="far fa-3x fa-play-circle"></i>
+         <i class="fas fa-3x fa-step-forward"></i>
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/11d1f2f794.js" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
 </body>
-</html>
+</html> 
