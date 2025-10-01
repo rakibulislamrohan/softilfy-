@@ -42,7 +42,10 @@ nav ul li{
     display:flex;
     padding-left: 10px;
     text-align: right; 
-
+    cursor: pointer;
+}
+nav li{
+    margin: 10px;
 }
 .home{
     margin-left: 1200px;
@@ -101,4 +104,5 @@ nav ul li{
 }
 .timeStamp{
     margin-right: 23px;
+    cursor: pointer;
 }
