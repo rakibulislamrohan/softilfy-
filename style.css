@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Varela+Round&display=swap');
 
 body{
-    background-color: aliceblue;
+    background-color: rgb(231, 231, 236);
 }
 
 *{
@@ -10,7 +10,7 @@ body{
     padding: 0;
 }
 nav{
-    font-family: "Ubuntu Sans", sans-serif;
+    font-family: "Ubuntu Sans", sans-serif; 
     color: aliceblue;
     
 }
@@ -50,7 +50,7 @@ nav ul li{
 
 .container{
     color: white;
-    display: flex;
+    display: column;
     height: 70.1vh;
     width: 70%;
     background-color: black;
@@ -81,5 +81,24 @@ nav ul li{
 }
 #voliumBar{
     width:80vw;
-     
+}
+.songItem{
+    display: flex;
+    height: 50px;
+    width: 30%;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin: 23px;
+}
+.songItem img{
+    width: 40px;
+    height: 40px;
+    border-radius: 70px;
+    margin: 7.5px;
+}
+.timeStamp{
+    margin-right: 23px;
 }
