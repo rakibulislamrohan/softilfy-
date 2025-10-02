@@ -106,3 +106,13 @@ nav li{
     margin-right: 23px;
     cursor: pointer;
 }
+
+.songInfo{
+     position: absolute;
+     left: 12vw;
+
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
