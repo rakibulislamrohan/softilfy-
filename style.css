@@ -109,10 +109,10 @@ nav li{
 
 .songInfo{
      position: absolute;
-     left: 12vw;
+     left: 20vw;
 
 }
 .songInfo img{
-    opacity: 0;
-    transition: opacity 1s ease-in;
+    opacity: 10;
+    transition: opacity 0.2s ease-in;
 }
