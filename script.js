@@ -3,7 +3,7 @@
 let songIndex = 0;
 let audioElement = new Audio('song/1.mp3');  
 let masterPlay = document.getElementById('masterPlay');
-//let myProgressBar = documnet.getElementById('myProgeressBar');
+let songBar = document.getElementById('songBar');
 let gif = document.getElementById('gif');
 
 let songs = [
@@ -40,6 +40,6 @@ audioElement.addEventListener('timeupdate', () => {
     // update seek bar 
 Progress = parseInt((audioElement.currentTime/audioElement.duration)* 100);
 console.log(Progress);
-myProgressBar.value = Progress; 
+songBar.value = Progress;  
 })
  
