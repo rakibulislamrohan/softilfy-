@@ -62,7 +62,11 @@ element.addEventListener('click', (e) => {
     makeAllPlays();
     e.target.classList.remove('fa-play-circle');
     e.target.classList.add('fa-pasue-circle')
+    audioElement.src = 'song/3.mp3';
+    audioElement.currentTime = 0;
+    audioPlay(); 
 } )
 
     
 })
+
