@@ -5,17 +5,24 @@ let audioElement = new Audio('song/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let songBar = document.getElementById('songBar');
 let gif = document.getElementById('gif');
+let songItem = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
     {songName:"salam-isque-hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
-    {songName:"salam isque hae", filePath:"song/1.mp3", coverPath:"cover/1.jpg"},
+    {songName:"tere-mere-kahani ", filePath:"song/2.mp3", coverPath:"cover/2.jpg"},
+    {songName:"dill-dey-diye", filePath:"song/3.mp3", coverPath:"cover/3.jpg"},
+    {songName:"dill mere manta nehi", filePath:"song/4.mp3", coverPath:"cover/4.jpg"},
+    {songName:"thu - jo- mila ", filePath:"song/5.mp3", coverPath:"cover/5.jpg"},
+    {songName:"thum-hei-hon", filePath:"song/6.mp3", coverPath:"cover/6.jpg"},
+    {songName:"payer-lavsome-kaha", filePath:"song/7.mp3", coverPath:"cover/7.jpg"},
+    {songName:"pal-ek-pal", filePath:"song/8.mp3", coverPath:"cover/8.jpg"},
 ]
+
+songItem.forEach((element,i) => {
+    console.log(element,i);
+     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+})
 
 // Audion element.play();
 
@@ -28,7 +35,7 @@ masterPlay.addEventListener('click', () =>{
         gif.style.opacity = 1;         
     }
     else{
-          audioElement.pause(); 
+          audioElement.pause();
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');  
         gif.style.opacity = 0;  
