@@ -19,7 +19,7 @@ let songs = [
 ]
 
 songItem.forEach((element,i) => {
-    console.log(element,i);
+    // console.log(element,i);
      element.getElementsByTagName("img")[0].src = songs[i].coverPath;
      element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
 })
@@ -42,11 +42,27 @@ masterPlay.addEventListener('click', () =>{
     }
 })
 
-audioElement.addEventListener('timeupdate', () => {ß
+audioElement.addEventListener('timeupdate', () => { 
     // update seek bar 
 Progress = parseInt((audioElement.currentTime/audioElement.duration)* 100);
 songBar.value = Progress;  
 })
 songBar.addEventListener('change', ()=> {
     audioElement.currentTime = songBar.value * audioElement.duration/100;
+})
+const makeAllPlays = () =>{
+ Array.from(document.getElementsByClassName("sonItemPlay")).forEach((element) => {
+    element.target.classList.add('fa-pasue-circle');
+ })
+}
+
+Array.from(document.getElementsByClassName("sonItemPlay")).forEach((element) => {
+element.addEventListener('click', (e) => {
+   // console.log(e.target);
+    makeAllPlays();
+    e.target.classList.remove('fa-play-circle');
+    e.target.classList.add('fa-pasue-circle')
+} )
+
+    
 })
