@@ -1,4 +1,4 @@
-//console.log("welcome to spotify");
+console.log("welcome to spotify");
 // intilize the song variable s
 let songIndex = 0;
 let audioElement = new Audio('song/1.mp3');  
@@ -52,7 +52,9 @@ songBar.addEventListener('change', ()=> {
 })
 const makeAllPlays = () =>{
  Array.from(document.getElementsByClassName("sonItemPlay")).forEach((element) => {
-    element.target.classList.add('fa-pasue-circle');
+    element.classList.remove('fa-pasue-circle');
+    element.classList.add('fa-play-circle');
+
  })
 }
 
@@ -64,7 +66,7 @@ element.addEventListener('click', (e) => {
     e.target.classList.add('fa-pasue-circle')
     audioElement.src = 'song/3.mp3';
     audioElement.currentTime = 0;
-    audioPlay(); 
+    audioElement.play(); 
 } )
 
     
